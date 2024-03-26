@@ -1,0 +1,16 @@
+C:\NerdStore\src\NerdStore.Catalogo.Domain\bin\Debug\net8.0\NerdStore.Catalogo.Domain.deps.json
+C:\NerdStore\src\NerdStore.Catalogo.Domain\bin\Debug\net8.0\NerdStore.Catalogo.Domain.dll
+C:\NerdStore\src\NerdStore.Catalogo.Domain\bin\Debug\net8.0\NerdStore.Catalogo.Domain.pdb
+C:\NerdStore\src\NerdStore.Catalogo.Domain\bin\Debug\net8.0\NerdStore.Core.dll
+C:\NerdStore\src\NerdStore.Catalogo.Domain\bin\Debug\net8.0\NerdStore.Core.pdb
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\NerdStore.Catalogo.Domain.csproj.AssemblyReference.cache
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\NerdStore.Catalogo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\NerdStore.Catalogo.Domain.AssemblyInfoInputs.cache
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\NerdStore.Catalogo.Domain.AssemblyInfo.cs
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\NerdStore.Catalogo.Domain.csproj.CoreCompileInputs.cache
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\NerdStore.Catalogo.Domain.sourcelink.json
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\NerdStore.Catalogo.Domain.csproj.CopyComplete
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\NerdStore.Catalogo.Domain.dll
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\refint\NerdStore.Catalogo.Domain.dll
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\NerdStore.Catalogo.Domain.pdb
+C:\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\net8.0\ref\NerdStore.Catalogo.Domain.dll

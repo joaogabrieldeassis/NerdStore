@@ -1,0 +1,13 @@
+C:\NerdStore\src\NerdStore.Core\bin\Debug\net8.0\NerdStore.Core.deps.json
+C:\NerdStore\src\NerdStore.Core\bin\Debug\net8.0\NerdStore.Core.dll
+C:\NerdStore\src\NerdStore.Core\bin\Debug\net8.0\NerdStore.Core.pdb
+C:\NerdStore\src\NerdStore.Core\obj\Debug\net8.0\NerdStore.Core.csproj.AssemblyReference.cache
+C:\NerdStore\src\NerdStore.Core\obj\Debug\net8.0\NerdStore.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\NerdStore\src\NerdStore.Core\obj\Debug\net8.0\NerdStore.Core.AssemblyInfoInputs.cache
+C:\NerdStore\src\NerdStore.Core\obj\Debug\net8.0\NerdStore.Core.AssemblyInfo.cs
+C:\NerdStore\src\NerdStore.Core\obj\Debug\net8.0\NerdStore.Core.csproj.CoreCompileInputs.cache
+C:\NerdStore\src\NerdStore.Core\obj\Debug\net8.0\NerdStore.Core.sourcelink.json
+C:\NerdStore\src\NerdStore.Core\obj\Debug\net8.0\NerdStore.Core.dll
+C:\NerdStore\src\NerdStore.Core\obj\Debug\net8.0\refint\NerdStore.Core.dll
+C:\NerdStore\src\NerdStore.Core\obj\Debug\net8.0\NerdStore.Core.pdb
+C:\NerdStore\src\NerdStore.Core\obj\Debug\net8.0\ref\NerdStore.Core.dll

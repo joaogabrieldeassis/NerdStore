@@ -24,7 +24,7 @@ namespace NerdStore.Catalogo.Data.Context
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CatalogoContext).Assembly);
         }
 
-        public async Task<bool> Comit()
+        public async Task<bool> Commit()
         {
             foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("DataCadastro") != null))
             {

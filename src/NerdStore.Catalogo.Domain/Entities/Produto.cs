@@ -21,6 +21,7 @@ namespace NerdStore.Catalogo.Domain.Entities
 
             Validar();
         }
+        protected Produto()  {  }
 
         public Guid CategoriaId { get; private set; }
         public string Nome { get; private set; }
@@ -32,7 +33,7 @@ namespace NerdStore.Catalogo.Domain.Entities
         public int QuantidadeEstoque { get; private set; }
         public Categoria Categoria { get; private set; }
         public Dimensoes Dimensoes { get; private set; }
-
+        
         public void Ativar() => Ativo = true;
 
         public void Desativar() => Ativo = true;
@@ -73,35 +74,6 @@ namespace NerdStore.Catalogo.Domain.Entities
             Validacoes.ValidarSeIgual(CategoriaId, Guid.Empty, "O campo CategoriaId do produto não pode estar vazio");
             Validacoes.ValidarSeMenorQue(Valor, 1, "O campo Valor do produto não pode se menor igual a 0");
             Validacoes.ValidarSeVazio(Imagem, "O campo Imagem do produto não pode estar vazio");
-        }
-    }
-
-    public class Categoria : Entity
-    {
-        public Categoria(string nome, int codigo)
-        {
-            Nome = nome;
-            Codigo = codigo;
-        }
-
-        public Categoria()
-        {
-
-        }
-
-        public string Nome { get; private set; }
-        public int Codigo { get; private set; }
-        public List<Produto> Produtos { get; private set; }
-
-        public override string ToString()
-        {
-            return $"{Nome} - {Codigo}";
-        }
-
-        public void Validar()
-        {
-            Validacoes.ValidarSeVazio(Nome, "O campo Nome da categoria não pode estar vazio");
-            Validacoes.ValidarSeIgual(Codigo, 0, "O campo Codigo não pode ser 0");
         }
     }
 }

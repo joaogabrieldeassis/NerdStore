@@ -20,9 +20,7 @@ namespace NerdStore.Catalogo.Domain.ServiceDomain
         {
             var produto = await _produtoRepository.ObterPorId(produtoId);
 
-            if (produto == null) return false;
-
-            if (!produto.PossuiEstoque(quantidade)) return false;
+            if (produto == null) return false;            
 
             produto.DebitarEstoque(quantidade);
 
@@ -32,7 +30,7 @@ namespace NerdStore.Catalogo.Domain.ServiceDomain
             }
 
             _produtoRepository.Atualizar(produto);
-            return await _produtoRepository.IUnitOfWork.Comit();
+            return await _produtoRepository.IUnitOfWork.Commit();
 
         }
 
@@ -45,7 +43,7 @@ namespace NerdStore.Catalogo.Domain.ServiceDomain
             produto.ReporEstoque(quantidade);
 
             _produtoRepository.Atualizar(produto);
-            return await _produtoRepository.IUnitOfWork.Comit();
+            return await _produtoRepository.IUnitOfWork.Commit();
         }
 
         public void Dispose()
