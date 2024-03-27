@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NerdStore.Catalogo.Data", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NerdStore.Catalogo.Application", "..\NerdStore.Catalogo.Application\NerdStore.Catalogo.Application.csproj", "{2B06317C-8B32-4468-BBAE-E1CFE3780C72}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NerdSotore.WebApp.MVC", "..\NerdSotore.WebApp.MVC\NerdSotore.WebApp.MVC.csproj", "{148FE7C3-DDD2-4A80-8C0B-CF18234FB935}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NerdStore.WebApp.MVC", "..\NerdSotore.WebApp.MVC\NerdStore.WebApp.MVC.csproj", "{148FE7C3-DDD2-4A80-8C0B-CF18234FB935}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NerdStore.Vendas.Domain", "..\NerdSotre.Vendas.Domain\NerdStore.Vendas.Domain.csproj", "{9EE00E9D-B362-4C03-B6D1-954E785D7D01}"
 EndProject

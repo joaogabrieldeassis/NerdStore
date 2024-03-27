@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using NerdSotre.Vendas.Domain.Models;
+using NerdStore.Core.Interfaces;
 using NerdStore.Core.Interfaces.Data;
 using NerdStore.Core.Messages;
 
@@ -8,10 +9,12 @@ namespace NerdStore.Vendas.infraestrutura
 {
     public class VendasContext : DbContext, IUnitOfWork
     {
-        public VendasContext(DbContextOptions<VendasContext> options)
+        private readonly IMediatrHandler _mediatrHandler;
+
+        public VendasContext(DbContextOptions<VendasContext> options, IMediatrHandler mediatrHandler)
             : base(options)
         {
-           
+            _mediatrHandler = mediatrHandler;
         }
 
         public DbSet<Pedido> Pedidos { get; set; }
@@ -33,7 +36,7 @@ namespace NerdStore.Vendas.infraestrutura
                     entry.Property("DataCadastro").IsModified = false;
                 }
             }
-            
+
             var sucesso = await base.SaveChangesAsync() > 0;
             //if(sucesso) await _mediatorHandler.PublicarEventos(this);
 

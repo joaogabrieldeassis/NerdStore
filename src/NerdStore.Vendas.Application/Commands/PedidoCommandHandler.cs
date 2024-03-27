@@ -1,18 +1,23 @@
 ﻿using MediatR;
 using NerdSotre.Vendas.Domain.Interfaces.Repository;
 using NerdSotre.Vendas.Domain.Models;
+using NerdStore.Core.Interfaces;
 using NerdStore.Core.Messages;
+using NerdStore.Core.Messages.ComunMessages.Notifications;
+using NerdStore.Vendas.Application.Events;
 
 namespace NerdStore.Vendas.Application.Commands
 {
-    public class PedidoCommandHandler : IRequestHandler<AdicionarItemPedidoCommand,bool>
+    public class PedidoCommandHandler : IRequestHandler<AdicionarItemPedidoCommand, bool>
 
     {
         private readonly IPedidoRepository _pedidoRepository;
+        private readonly IMediatrHandler _mediatorHandler;
 
-        public PedidoCommandHandler(IPedidoRepository pedidoRepository)
+        public PedidoCommandHandler(IPedidoRepository pedidoRepository, IMediatrHandler mediatorHandler)
         {
             _pedidoRepository = pedidoRepository;
+            _mediatorHandler = mediatorHandler;
         }
 
         public async Task<bool> Handle(AdicionarItemPedidoCommand message, CancellationToken cancellationToken)
@@ -22,12 +27,13 @@ namespace NerdStore.Vendas.Application.Commands
             var pedido = await _pedidoRepository.ObterPedidoRascunhoPorClienteId(message.ClienteId);
             var pedidoItem = new PedidoItem(message.ProdutoId, message.Nome, message.Quantidade, message.ValorUnitario);
 
-            if(pedido == null)
+            if (pedido == null)
             {
                 pedido = Pedido.PedidoFactory.NovoPedidoRascunho(message.ClienteId);
                 pedido.AdicionarItem(pedidoItem);
 
                 _pedidoRepository.Adicionar(pedido);
+                pedido.AdicionarEvento(new PedidoRascunhoIniciadoEvent(message.ClienteId, message.ProdutoId));
             }
             else
             {
@@ -42,7 +48,9 @@ namespace NerdStore.Vendas.Application.Commands
                 {
                     _pedidoRepository.AdicionarItem(pedidoItem);
                 }
+                pedido.AdicionarEvento(new PedidoAtualizadoEvent(pedido.ClienteId, pedido.Id, pedido.ValorTotal));
             }
+            pedido.AdicionarEvento(new PedidoItemAdicionadoEvent(pedido.ClienteId, pedido.Id, message.ProdutoId,message.Nome, message.ValorUnitario, message.Quantidade));
             return await _pedidoRepository.IUnitOfWork.Commit();
         }
 
@@ -53,7 +61,7 @@ namespace NerdStore.Vendas.Application.Commands
 
             message.ValidationResult.Errors.ForEach(error =>
             {
-                
+                _mediatorHandler.PublicarNotificacao(new DomainNotification(message.MessageType, error.ErrorMessage));
             });
             return false;
         }

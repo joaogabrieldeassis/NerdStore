@@ -1,4 +1,5 @@
 ﻿
+
 using NerdStore.Core.Events;
 
 namespace NerdStore.Catalogo.Domain.Events

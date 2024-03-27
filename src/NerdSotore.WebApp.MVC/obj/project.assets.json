@@ -4527,9 +4527,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NerdStore\\src\\NerdSotore.WebApp.MVC\\NerdSotore.WebApp.MVC.csproj",
-      "projectName": "NerdSotore.WebApp.MVC",
-      "projectPath": "C:\\NerdStore\\src\\NerdSotore.WebApp.MVC\\NerdSotore.WebApp.MVC.csproj",
+      "projectUniqueName": "C:\\NerdStore\\src\\NerdSotore.WebApp.MVC\\NerdStore.WebApp.MVC.csproj",
+      "projectName": "NerdStore.WebApp.MVC",
+      "projectPath": "C:\\NerdStore\\src\\NerdSotore.WebApp.MVC\\NerdStore.WebApp.MVC.csproj",
       "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
       "outputPath": "C:\\NerdStore\\src\\NerdSotore.WebApp.MVC\\obj\\",
       "projectStyle": "PackageReference",

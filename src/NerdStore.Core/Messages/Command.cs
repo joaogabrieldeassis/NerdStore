@@ -1,11 +1,10 @@
-﻿
-using FluentValidation.Results;
+﻿using FluentValidation.Results;
 using MediatR;
 
 
 namespace NerdStore.Core.Messages
 {
-    public class Command : Message, IRequest<bool>
+    public abstract class Command : Message, IRequest<bool>
     {
         public Command()
         {
@@ -16,7 +15,7 @@ namespace NerdStore.Core.Messages
 
         public virtual bool EhValido()
         {
-            return true;
+            throw new NotImplementedException();
         }
     }
 }

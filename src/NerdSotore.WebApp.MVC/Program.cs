@@ -1,6 +1,6 @@
 
 
-using NerdSotore.WebApp.MVC.Setup;
+using NerdSotore.WebApp.MVC.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
