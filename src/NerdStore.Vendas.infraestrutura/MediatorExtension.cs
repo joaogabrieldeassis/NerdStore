@@ -1,10 +1,12 @@
-﻿
+﻿using NerdStore.Core.DomainObjects;
+using NerdStore.Core.Interfaces;
+using NerdStore.Vendas.infraestrutura;
 
 namespace NerdStore.Vendas.Data
 {
     public static class MediatorExtension
     {
-        /*public static async Task PublicarEventos(this IMediatorHandler mediator, VendasContext ctx)
+        public static async Task PublicarEventos(this IMediatrHandler mediator, VendasContext ctx)
         {
             var domainEntities = ctx.ChangeTracker
                 .Entries<Entity>()
@@ -23,6 +25,6 @@ namespace NerdStore.Vendas.Data
                 });
 
             await Task.WhenAll(tasks);
-        }*/
+        }
     }
 }

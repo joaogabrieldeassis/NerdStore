@@ -4,6 +4,7 @@ using NerdSotre.Vendas.Domain.Models;
 using NerdStore.Core.Interfaces;
 using NerdStore.Core.Interfaces.Data;
 using NerdStore.Core.Messages;
+using NerdStore.Vendas.Data;
 
 namespace NerdStore.Vendas.infraestrutura
 {
@@ -38,7 +39,7 @@ namespace NerdStore.Vendas.infraestrutura
             }
 
             var sucesso = await base.SaveChangesAsync() > 0;
-            //if(sucesso) await _mediatorHandler.PublicarEventos(this);
+            if(sucesso) await _mediatrHandler.PublicarEventos(this);
 
             return sucesso;
         }

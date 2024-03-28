@@ -13,6 +13,9 @@ using NerdStore.Core.Events;
 using NerdStore.Core.Interfaces;
 using NerdStore.Core.Messages.ComunMessages.Notifications;
 using NerdStore.Vendas.Application.Commands;
+using NerdStore.Vendas.Application.Events;
+using NerdStore.Vendas.Application.Queries;
+using NerdStore.Vendas.Application.Queries.Interfaces;
 using NerdStore.Vendas.infraestrutura.Repository;
 
 namespace NerdSotore.WebApp.MVC.Configurations
@@ -29,10 +32,15 @@ namespace NerdSotore.WebApp.MVC.Configurations
             builber.Services.AddScoped<IProdutoAppService, ProdutoAppService>();
             builber.Services.AddScoped<IEstoqueService, EstoqueService>();
             builber.Services.AddScoped<CatalogoContext>();
-            builber.Services.AddScoped<INotificationHandler<ProdutoAbaixoEstoqueEvent>, ProdutoEventHandler>();
+            
             builber.Services.AddScoped<IRequestHandler<AdicionarItemPedidoCommand, bool>, PedidoCommandHandler>();
             builber.Services.AddScoped<IPedidoRepository, PedidoRepository>();
-            
+            builber.Services.AddScoped<IPedidoQueries, PedidoQueries>();
+
+            builber.Services.AddScoped<INotificationHandler<PedidoRascunhoIniciadoEvent>, PedidoEventHandler>();
+            builber.Services.AddScoped<INotificationHandler<PedidoAtualizadoEvent>, PedidoEventHandler>();
+            builber.Services.AddScoped<INotificationHandler<PedidoItemAdicionadoEvent>, PedidoEventHandler>();
+
         }
     }
 }
