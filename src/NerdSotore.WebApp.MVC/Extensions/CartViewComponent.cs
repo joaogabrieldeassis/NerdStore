@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
+using NerdStore.Vendas.Application.Queries.Interfaces;
 
 namespace NerdStore.WebApp.MVC.Extensions
-{/*
+{
     public class CartViewComponent : ViewComponent
     {
         private readonly IPedidoQueries _pedidoQueries;
@@ -25,5 +25,5 @@ namespace NerdStore.WebApp.MVC.Extensions
 
             return View(itens);
         }
-    }*/
+    }
 }

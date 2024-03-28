@@ -34,6 +34,11 @@ namespace NerdSotore.WebApp.MVC.Configurations
             builber.Services.AddScoped<CatalogoContext>();
             
             builber.Services.AddScoped<IRequestHandler<AdicionarItemPedidoCommand, bool>, PedidoCommandHandler>();
+            builber.Services.AddScoped<IRequestHandler<AdicionarItemPedidoCommand, bool>, PedidoCommandHandler>();
+            builber.Services.AddScoped<IRequestHandler<AtualizarItemPedidoCommand, bool>, PedidoCommandHandler>();
+            builber.Services.AddScoped<IRequestHandler<RemoveItemPedidoCommand, bool>, PedidoCommandHandler>();
+            builber.Services.AddScoped<IRequestHandler<ApplicarVoucherPedidoCommand, bool>, PedidoCommandHandler>();
+            
             builber.Services.AddScoped<IPedidoRepository, PedidoRepository>();
             builber.Services.AddScoped<IPedidoQueries, PedidoQueries>();
 

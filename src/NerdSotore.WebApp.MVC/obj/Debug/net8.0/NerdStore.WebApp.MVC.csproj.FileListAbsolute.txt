@@ -3,7 +3,6 @@ C:\NerdStore\src\NerdSotore.WebApp.MVC\obj\Debug\net8.0\NerdStore.WebApp.MVC.Gen
 C:\NerdStore\src\NerdSotore.WebApp.MVC\obj\Debug\net8.0\NerdStore.WebApp.MVC.AssemblyInfoInputs.cache
 C:\NerdStore\src\NerdSotore.WebApp.MVC\obj\Debug\net8.0\NerdStore.WebApp.MVC.AssemblyInfo.cs
 C:\NerdStore\src\NerdSotore.WebApp.MVC\obj\Debug\net8.0\NerdStore.WebApp.MVC.csproj.CoreCompileInputs.cache
-C:\NerdStore\src\NerdSotore.WebApp.MVC\obj\Debug\net8.0\NerdStore.WebApp.MVC.MvcApplicationPartsAssemblyInfo.cs
 C:\NerdStore\src\NerdSotore.WebApp.MVC\obj\Debug\net8.0\NerdStore.WebApp.MVC.MvcApplicationPartsAssemblyInfo.cache
 C:\NerdStore\src\NerdSotore.WebApp.MVC\obj\Debug\net8.0\NerdStore.WebApp.MVC.RazorAssemblyInfo.cache
 C:\NerdStore\src\NerdSotore.WebApp.MVC\obj\Debug\net8.0\NerdStore.WebApp.MVC.RazorAssemblyInfo.cs
