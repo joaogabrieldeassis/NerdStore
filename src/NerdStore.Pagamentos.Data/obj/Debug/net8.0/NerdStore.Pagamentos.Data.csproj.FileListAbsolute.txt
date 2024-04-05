@@ -1,0 +1,6 @@
+C:\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\net8.0\NerdStore.Pagamentos.Data.csproj.AssemblyReference.cache
+C:\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\net8.0\NerdStore.Pagamentos.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\net8.0\NerdStore.Pagamentos.Data.AssemblyInfoInputs.cache
+C:\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\net8.0\NerdStore.Pagamentos.Data.AssemblyInfo.cs
+C:\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\net8.0\NerdStore.Pagamentos.Data.csproj.CoreCompileInputs.cache
+C:\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\net8.0\NerdStore.Pagamentos.Data.sourcelink.json

@@ -1,9 +1,12 @@
 ﻿using MediatR;
 using NerdSotre.Vendas.Domain.Interfaces.Repository;
 using NerdSotre.Vendas.Domain.Models;
+using NerdStore.Core.DomainObjects.Dtos;
+using NerdStore.Core.Extensions;
 using NerdStore.Core.Interfaces;
 using NerdStore.Core.Messages;
 using NerdStore.Core.Messages.ComunMessages.Notifications;
+using NerdStore.Core.Messages.IntegrationEvents;
 using NerdStore.Vendas.Application.Events;
 
 namespace NerdStore.Vendas.Application.Commands
@@ -11,7 +14,8 @@ namespace NerdStore.Vendas.Application.Commands
     public class PedidoCommandHandler : IRequestHandler<AdicionarItemPedidoCommand, bool>,
         IRequestHandler<AtualizarItemPedidoCommand, bool>,
         IRequestHandler<RemoveItemPedidoCommand, bool>,
-        IRequestHandler<ApplicarVoucherPedidoCommand, bool>
+        IRequestHandler<ApplicarVoucherPedidoCommand, bool>,
+        IRequestHandler<IniciarPedidoCommand, bool>
 
     {
         private readonly IPedidoRepository _pedidoRepository;
@@ -150,6 +154,23 @@ namespace NerdStore.Vendas.Application.Commands
             _pedidoRepository.RemoverItem(pedidoItem);
             _pedidoRepository.Atualizar(pedido);
 
+            return await _pedidoRepository.IUnitOfWork.Commit();
+        }
+
+        public async Task<bool> Handle(IniciarPedidoCommand request, CancellationToken cancellationToken)
+        {
+            if (!ValidarComando(request)) return false;
+
+            var pedido = await _pedidoRepository.ObterPedidoRascunhoPorClienteId(request.ClienteId);
+            pedido.IniciarPedido();
+
+            var itensList = new List<Item>();
+            pedido.PedidoItems.ForEach(i => itensList.Add(new Item { Id = i.ProdutoId, Quantidade = i.Quantidade }));
+            var listaProdutosPedido = new ListaProdutosPedido { PedidoId = pedido.Id, Itens = itensList };
+
+            pedido.AdicionarEvento(new PedidoIniciadoEvent(pedido.Id, pedido.ClienteId, listaProdutosPedido, pedido.ValorTotal, request.NomeCartao, request.NumeroCartao, request.ExpiracaoCartao, request.CvvCartao));
+
+            _pedidoRepository.Atualizar(pedido);
             return await _pedidoRepository.IUnitOfWork.Commit();
         }
 

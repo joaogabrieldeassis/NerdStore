@@ -1,0 +1,6 @@
+C:\NerdStore\src\NerdStore.Pagamentos.AntiCorruption\obj\Debug\net8.0\NerdStore.Pagamentos.AntiCorruption.csproj.AssemblyReference.cache
+C:\NerdStore\src\NerdStore.Pagamentos.AntiCorruption\obj\Debug\net8.0\NerdStore.Pagamentos.AntiCorruption.GeneratedMSBuildEditorConfig.editorconfig
+C:\NerdStore\src\NerdStore.Pagamentos.AntiCorruption\obj\Debug\net8.0\NerdStore.Pagamentos.AntiCorruption.AssemblyInfoInputs.cache
+C:\NerdStore\src\NerdStore.Pagamentos.AntiCorruption\obj\Debug\net8.0\NerdStore.Pagamentos.AntiCorruption.AssemblyInfo.cs
+C:\NerdStore\src\NerdStore.Pagamentos.AntiCorruption\obj\Debug\net8.0\NerdStore.Pagamentos.AntiCorruption.csproj.CoreCompileInputs.cache
+C:\NerdStore\src\NerdStore.Pagamentos.AntiCorruption\obj\Debug\net8.0\NerdStore.Pagamentos.AntiCorruption.sourcelink.json

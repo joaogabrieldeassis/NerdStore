@@ -1,4 +1,5 @@
 ﻿using NerdStore.Core.Messages;
+using NerdStore.Vendas.Application.Validations.Commands;
 
 namespace NerdStore.Vendas.Application.Commands
 {

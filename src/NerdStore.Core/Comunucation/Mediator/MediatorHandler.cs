@@ -29,5 +29,10 @@ namespace NerdStore.Core.Events
         {
             await _mediador.Publish(notificao);
         }
+
+        public async Task PublicarDomainEvent<T>(T notificacao) where T : DomainEvent
+        {
+            await _mediador.Publish(notificacao);
+        }
     }
 }

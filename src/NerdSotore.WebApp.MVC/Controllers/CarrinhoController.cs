@@ -61,7 +61,7 @@ namespace NerdSotore.WebApp.MVC.Controllers
             var produto = await _produtoAppService.ObterPorId(id);
             if (produto == null) return BadRequest();
 
-            var command = new RemoverItemPedidoCommand(ClienteId, id);
+            var command = new RemoveItemPedidoCommand(ClienteId, id);
             await _mediator.EnviarComando(command);
 
             if (OperacaoValida())
@@ -94,7 +94,7 @@ namespace NerdSotore.WebApp.MVC.Controllers
         [Route("aplicar-voucher")]
         public async Task<IActionResult> AplicarVoucher(string voucherCodigo)
         {
-            var command = new AplicarVoucherPedidoCommand(ClienteId, voucherCodigo);
+            var command = new ApplicarVoucherPedidoCommand(ClienteId, voucherCodigo);
             await _mediator.EnviarComando(command);
 
             if (OperacaoValida())
